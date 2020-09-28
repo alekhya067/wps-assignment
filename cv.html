@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CV</title>
+        <link rel="stylesheet" href="cv1.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <SCRIPT language="javascript">
+             var table = document.getElementById(tableID);  
+    var rowCount = table.rows.length;  
+    var row = table.insertRow(rowCount); 
+    function addRow(tableID) {  
+        var table = document.getElementById(tableID);  
+        var rowCount = table.rows.length;  
+        var row = table.insertRow(rowCount); 
+        
+        //Column 1  
+      var cell1 = row.insertCell(0);  
+      var element1 = document.createElement("input");  
+      element1.type = "text";  
+       cell1.appendChild(element1); 
+       //Column 2    
+       var cell2 = row.insertCell(1);  
+       var element2 = document.createElement("input");  
+       element2.type = "text"; 
+       cell2.appendChild(element2); 
+       //Column 3  
+       var cell3 = row.insertCell(2);  
+       var element3 = document.createElement("input");  
+       element3.type = "text";  
+       cell3.appendChild(element3);  
+       //column 4
+       var cell4 = row.insertCell(3);  
+       var element4 = document.createElement("input");  
+       element4.type = "text";  
+       cell4.appendChild(element4); 
+       var x = document.getElementById("submit"); 
+    x.addEventListener("click",function(){
+        alert("submitted");
+    })    }
+        </SCRIPT>
+    </head>
+    <body>
+        <h1>Create Your CV</h1>
+        <h3>Personal Details</h3>
+        <form>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname">
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname">
+            <br><br>
+           
+            <label for="num">Contact Number:</label>
+            <input type="text" id="num" name="num">
+           
+           
+          </form>
+          <br>
+          <form>
+              <label for="mail">Email:</label>
+              <input type="email" id="mail" name="mail">
+              <label for="pass">Password:</label>
+              <input type="password" id="pass" name="pass">
+          </form> 
+          <h3>Objectives</h3>
+          <label for="obj">Objectives</label>
+          <input type="text" id="obj" name="obj">
+        
+
+          <h3>Academic Details:</h3>
+          <INPUT type="button" class="button" value="Add" onclick="addRow('dataTable')" /> 
+          <TABLE id="dataTable" class="table" width="350px" border="1">  
+            <tr>
+               <th>Qualification</th>
+               <th>Institution</th>
+               <th>Year Of Passing</th>
+               <th>Percentage</th>
+            </tr>
+            <tr>
+                <td><input type="text" value="" name="nameTxt"></td>
+                <td><input type="text" value="" name="nameTxt"></td>
+                <td><input type="text" value="" name="nameTxt"></td>
+                <td><input type="text" value="" name="nameTxt"></td>
+
+            </tr>
+           
+           
+         </table>
+              
+              
+
+          <br>
+          <h3>Technical Summary</h3>
+          <form>
+            <p>Languages Known:</p>
+            <input type="checkbox" id="c" name="c" value="Bike">
+            <label for="c">C</label>
+            <input type="checkbox" id="c++" name="c++" value="Car">
+            <label for="c+">C++</label>
+            <input type="checkbox" id="python" name="python" value="Boat">
+            <label for="python">Python</label>
+            <input type="checkbox" id="java" name="java" value="Boat">
+            <label for="java">Java</label>
+            <input type="checkbox" id="none" name="none" value="Boat">
+            <label for="none">None</label>
+            <p>Web Technologies:</p>
+            <input type="checkbox" id="html" name="html" value="Bike">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="css" value="Car">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="none" name="none" value="Boat">
+            <label for="none">None</label>
+            <p>Database:</p>
+            <input type="checkbox" id="mysql" name="mysql" value="Bike">
+            <label for="mysql">MySql</label>
+            <input type="checkbox" id="sqlite" name="sqlite" value="Car">
+            <label for="sqlite">SQLite</label>
+            <input type="checkbox" id="mongodb" name="mongodb" value="Boat">
+            <label for="mongodb">MongoDb</label>
+            <input type="checkbox" id="none" name="none" value="Boat">
+            <label for="none">None</label>
+            
+
+           
+            
+
+          </form>
+           <h3>Projects</h3>
+           <INPUT type="button" class="button" value="Add" onclick="addRow('table2')"/>
+           <table  id="table2" class="table"   border = "1">
+            <tr>
+               <th>Name</th>
+               <th>Description</th>
+               <th>Date</th>
+               <th>Major/Minor</th>
+            </tr>
+            <tr>
+                <td><input type="text" value="" name="nameTxt"></td>
+                <td><input type="text" value="" name="nameTxt"></td>
+                <td><input type="text" value="" name="nameTxt"></td>
+                <td><input type="text" value="" name="nameTxt"></td>
+
+            </tr>
+            
+          </table>
+
+         <h3>Educational Experience</h3>
+         <INPUT type="button" class="button" value="Add " onclick="addRow('table3')" />
+         <table id="table3" class="table" border = "1">
+            <tr>
+               <th>Job</th>
+               <th>Duration</th>
+               <th>Accomplishments</th>
+               <th>Experience</th>
+               
+            </tr>
+            <tr>
+                <td><input type="text" value="" name="nameTxt"></td>
+                <td><input type="text" value="" name="nameTxt"></td>
+                <td><input type="text" value="" name="nameTxt"></td>
+                <td><input type="text" value="" name="nameTxt"></td>
+
+            </tr>
+            
+           
+         </table>
+
+
+          <h3>CV attachment</h3>
+          <form action="/action_page.php">
+            <label for="myfile">Select files:</label>
+            <input type="file" id="myfile" name="myfile" multiple><br><br>
+            <input type="submit" id="submit">
+          </form> 
+
+          
+          
+
+
+
+        
+
+    </body>
+</html>
